@@ -1,0 +1,61 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/76b3d8f3.main.css">
+</head>
+<body ng-app="angularSiteApp">
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <div class="navbar" bs-navbar="">
+        <div class="navbar-inner">
+            <a class="brand" href="#">JDivock.com</a>
+            <ul class="nav">
+                <!-- You can use regular expressions -->
+                <li data-match-route="/"><a href="#">Home</a></li>
+                <li data-match-route="/blag"><a href="#/blag">Blag</a></li>
+                <li data-match-route="/multipost"><a href="#/multipost">MultiPost</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" ng-view="">
+    </div>
+    <footer class="footer">
+        <ul class="inline">
+            <li><a href="https://twitter.com/jdivock" target="_blank"><i class="smicon-twitter"></i></a></li>
+            <li><a href="https://github.com/jdivock" target="_blank"><i class="smicon-github"></i></a></li>
+            <li><a href="http://www.flickr.com/photos/8978912@N07/" target="_blank"><i class="smicon-flickr"></i></a></li>
+            <li><a href="http://yourestilloversharingjay.tumblr.com/" target="_blank"><i class="smicon-tumblr"></i></a></li>
+            <li><a href="http://www.linkedin.com/profile/view?id=12391583" target="_blank"><i class="smicon-linkedin"></i></a></li>
+            <li><a href="https://plus.google.com/104434683311075218429" target="_blank"><i class="smicon-google"></i></a></li>
+            <li><a href="http://instagram.com/jdivock" target="_blank"><i class="smicon-instagram"></i></a></li>
+        </ul>
+        Built with node and angular and probably a little (read: a lot) broken at the moment.
+    </footer>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    var _gaq=[['_setAccount','UA-42151790-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/70328c48.scripts.js"></script>
+    <script src="scripts/3d56a611.plugins.js"></script>
+    <script src="scripts/25e920e4.modules.js"></script>
+</body>
+</html>
