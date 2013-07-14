@@ -1,7 +1,16 @@
 {
   "name": "angular-site",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "2.5.x",
+    "oauth": ">=0.9.8",
+    "querystring": ">=0.1.x",
+    "tumblrwks": ">=0.1.x",
+    "cookies": "~0.3.6",
+    "evernote": "~1.25.0",
+    "async": "~0.2.9",
+    "needle": "~0.5.2"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
