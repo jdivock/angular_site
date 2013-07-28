@@ -9,7 +9,7 @@ exports.checkSessions = function(req, res) {
 
 	// keys are signed and kept in cookie
 	// console.log("CHECK SESSION:");
-	// console.log(req.cookies);
+	// console.log("CHECK SESSION", req.cookies);
 
 
 	res.send(JSON.stringify({
@@ -122,12 +122,8 @@ exports.evernote_cb = function(req, res) {
 
 	evernoteClient.getAccessToken(req.session.evernote_oauth_token, req.session.evernote_oauth_token_secret, req.param('oauth_verifier'), function(error, oauthAccessToken, oauthAccessTokenSecret, results) {
 
-		res.cookie('evernote_oauth_access_token', oauthAccessToken, {
-			signed: true
-		});
-		res.cookie('evernote_oauth_access_token_secret', oauthAccessTokenSecret, {
-			signed: true
-		});
+		res.cookie('evernote_oauth_access_token', oauthAccessToken);
+		res.cookie('evernote_oauth_access_token_secret', oauthAccessTokenSecret);
 
 
 		res.cookie('evernote_active', true);
@@ -181,20 +177,17 @@ exports.tumblr_cb = function(req, res) {
 		req.param('oauth_verifier'), function(error, tumblr_oauth_access_token, tumblr_oauth_access_token_secret, results2) {
 
 		if (error) {
-			console.log('error');
-			console.log(error);
+			console.log('error', error);
 		} else {
-			console.log("OA SUCCESS");
+			console.log("TUMBLR OA SUCCESS");
 			// store the access token in the session
 			//req.session.tumblr_oauth_access_token = tumblr_oauth_access_token;
 			//req.session.tumblr_oauth_access_token_secret = tumblr_oauth_access_token_secret;
 
-			res.cookie('tumblr_oauth_access_token', tumblr_oauth_access_token, {
-				signed: true
-			});
-			res.cookie('tumblr_oauth_access_token_secret', tumblr_oauth_access_token_secret, {
-				signed: true
-			});
+			res.cookie('tumblr_oauth_access_token', tumblr_oauth_access_token);
+			res.cookie('tumblr_oauth_access_token_secret', tumblr_oauth_access_token_secret);
+
+			// console.log("SETTING TUMBLR TOKEN", req.cookie);
 
 			//store in redis
 			//redis.hset(TUMB_KEY, tumblr_oauth_access_token, tumblr_oauth_access_token_secret);
@@ -227,8 +220,7 @@ function postTumblr(req, res, cb) {
 		title: req.body.title,
 		body: req.body.post
 	}, function(json) {
-		console.log("TUMBLR POST COMPLETE: ");
-		console.log(json);
+		console.log("TUMBLR POST COMPLETE", json);
 		cb();
 	});
 };
