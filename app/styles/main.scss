@@ -1,10 +1,47 @@
-@import "bootstrap-sass/lib/bootstrap";
+@import "../styles/bootstrap/bootstrap";
+@import "../styles/font-awesome/font-awesome";
 
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+.header-row {
+    h3 {
+
+        margin-left: 10px;
+        line-height: 20px;
+    }
+
+    ul{ 
+        margin-right: 20px;
+    }
+
+    ul.inline li {
+        padding-left: 0px;
+    }
 }
+
+.navbar-inner .brand {
+    margin-left: 30px;
+}
+
+.navbar ul.social {
+    font-size: 1.2em;
+    position: absolute;
+    right: 30px;
+    left: auto;
+
+}
+
+.navbar .social > li > a {
+    padding: 10px 10px 10px;
+}
+
+footer ul.social {
+    margin-bottom: 0px;
+    font-size: 1.4em;
+    padding-right: 30px;
+    // position: absolute;
+    // bottom: 5px;
+
+}
+
 
 textarea {
     width: 90%
@@ -15,27 +52,33 @@ ul.nav li:hover{
 }
 
 footer {
-    padding: 20px;
+    color: #fff;
+    background-color: #444;
+    padding: 10px 0;
 
-    a{
-        line-height: 32px;
-        height: 22px;
-        width: 22px;
-        display: inline-block;
-        cursor: default;
-        
+    // a{
+    //     line-height: 32px;
+    //     height: 22px;
+    //     width: 22px;
+    //     display: inline-block;
+    //     cursor: default;
+
+    span.sub{
+        line-height: 2em;
+        margin-left: 30px;
+        font-size: 1.3em;
     }
+        
     a:hover{
         text-decoration: none;
     }
     i{
-        color: #000;
         cursor: pointer;
+        color: #000;
+    }
+    i:hover {
+        color: #fff;
     }
 }
 
 
-[class^="icon-"],
-[class*=" icon-"] {
-  background-image: url("../images/glyphicons-halflings.png");
-}
