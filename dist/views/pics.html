@@ -1,0 +1,26 @@
+<div id="carousel-flickr" class="carousel slide">
+  <!-- Indicators -->
+<!--   <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol> -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item" ng-repeat="item in pics.photos.photo" ng-class="{active: $first}">
+      <img ng-src="http://farm{{item.farm}}.staticflickr.com/{{item.server}}/{{item.id}}_{{item.secret}}_b.jpg">
+      <div class="carousel-caption">
+        {{item.title}}
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-flickr" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-flickr" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</div>

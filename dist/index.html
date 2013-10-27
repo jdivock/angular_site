@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="styles/9d7d491f.main.css">
+    <link rel="stylesheet" href="styles/a28808ad.main.css">
 </head>
 <body ng-app="angularSiteApp">
     <!--[if lt IE 7]>
@@ -21,103 +21,110 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <!-- Add your site or application content here -->
-    <div class="navbar navbar-inverse" bs-navbar="">
+
+    <div id="wrapper">
+
+    <div id="header" class="navbar navbar-inverse" bs-navbar="">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">JDivock.com</a>
         </div>
         <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <!-- You can use regular expressions -->
-            <li data-match-route="/"><a href="#">Home</a></li>
-            <li data-match-route="/blag"><a href="#/blag">Blag</a></li>
-            <li data-match-route="/multipost"><a href="#/multipost">MultiPost</a></li>
-        </ul>
+            <ul class="nav navbar-nav">
+                <!-- You can use regular expressions -->
+                <li data-match-route="/"><a href="#">Home</a></li>
+                <li data-match-route="/blag"><a href="#/blag">Blag</a></li>
+                <li data-match-route="/multipost"><a href="#/multipost">MultiPost</a></li>
+                <li data-match-route="/pics"><a href="#/pics">Pics</a></li>
+            </ul>
 
-        <ul class="nav navbar-nav social">
-            <!-- You can use regular expressions -->
-            <li>
-                <a href="https://twitter.com/jdivock" target="_blank">
+            <ul class="nav navbar-nav social">
+                <!-- You can use regular expressions -->
+                <li>
+                    <a href="https://twitter.com/jdivock" target="_blank">
+                        <i class="icon-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jdivock" target="_blank">
+                        <i class="icon-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div ng-view=""></div>
+    </div>
+
+
+
+    <footer>
+        <span class="sub">Jason Divock</span>
+
+        <ul class="list-inline pull-right social">
+            <li><a href="https://twitter.com/jdivock" target="_blank">
+                <span class="icon-stack">
+                    <i class="icon-check-empty icon-stack-base"></i>
                     <i class="icon-twitter"></i>
-                </a>
-            </li>
+                </span>
+
+            </a></li>
             <li>
                 <a href="https://github.com/jdivock" target="_blank">
-                    <i class="icon-github"></i>
+                    <span class="icon-stack">
+                        <i class="icon-check-empty icon-stack-base"></i>
+                        <i class="icon-github"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="http://ape-shit-fuck-jacked.tumblr.com/" target="_blank">
+                    <span class="icon-stack">
+                        <i class="icon-check-empty icon-stack-base"></i>
+                        <i class="icon-tumblr"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.flickr.com/photos/8978912@N07/" target="_blank">
+                    <span class="icon-stack">
+                        <i class="icon-check-empty icon-stack-base"></i>
+                        <i class="icon-flickr"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="http://instagram.com/jdivock" target="_blank">
+                    <span class="icon-stack">
+                        <i class="icon-check-empty icon-stack-base"></i>
+                        <i class="icon-instagram"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.linkedin.com/profile/view?id=12391583" target="_blank">
+                    <span class="icon-stack">
+                        <i class="icon-check-empty icon-stack-base"></i>
+                        <i class="icon-linkedin"></i>
+                    </span>
                 </a>
             </li>
         </ul>
+    </footer>
+
     </div>
-</div>
 
-<div class="container">
-    <div ng-view=""></div>
-</div>
-
-<footer class="footer clearfix">
-    <span class="sub">Jason Divock</span>
-
-    <ul class="list-inline pull-right social">
-        <li><a href="https://twitter.com/jdivock" target="_blank">
-            <span class="icon-stack">
-                <i class="icon-check-empty icon-stack-base"></i>
-                <i class="icon-twitter"></i>
-            </span>
-
-        </a></li>
-        <li>
-            <a href="https://github.com/jdivock" target="_blank">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base"></i>
-                    <i class="icon-github"></i>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="http://ape-shit-fuck-jacked.tumblr.com/" target="_blank">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base"></i>
-                    <i class="icon-tumblr"></i>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="http://www.flickr.com/photos/8978912@N07/" target="_blank">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base"></i>
-                    <i class="icon-flickr"></i>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="http://instagram.com/jdivock" target="_blank">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base"></i>
-                    <i class="icon-instagram"></i>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="http://www.linkedin.com/profile/view?id=12391583" target="_blank">
-                <span class="icon-stack">
-                    <i class="icon-check-empty icon-stack-base"></i>
-                    <i class="icon-linkedin"></i>
-                </span>
-            </a>
-        </li>
-    </ul>
-</footer>
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    var _gaq=[['_setAccount','UA-42151790-1'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src='//www.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="scripts/fb7c78e9.scripts.js"></script>
-<script src="scripts/e6dd354d.plugins.js"></script>
-<script src="scripts/25e920e4.modules.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        var _gaq=[['_setAccount','UA-42151790-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/75d013ed.scripts.js"></script>
+    <script src="scripts/fddc1230.plugins.js"></script>
+    <script src="scripts/25e920e4.modules.js"></script>
 </body>
 </html>
