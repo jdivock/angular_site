@@ -8,12 +8,6 @@ var Flickr = require("flickrapi"),
 	};
 
 
-function createFlickrRef( farmId, serverId, id, secret ){
-	//http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
-
-	return 'http://farm' + farmId + '.staticflickr.com/' + serverId + '/' + id + '_' + secret + '.jpg';
-}
-
 exports.getFlickrPhotos = function(req, res) {
 	Flickr.authenticate(flickrOptions, function(error, flickr) {
 		// we can now use "flickr" as our API object
