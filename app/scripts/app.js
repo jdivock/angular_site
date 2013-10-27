@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularSiteApp', ['$strap.directives', 'multipostServices'])
+angular.module('angularSiteApp', ['$strap.directives', 'multipostServices', 'picsServices'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -13,6 +13,10 @@ angular.module('angularSiteApp', ['$strap.directives', 'multipostServices'])
       .when('/multipost',{
         templateUrl: 'views/multipost.html',
         controller: 'MultipostCtrl'
+      })
+      .when('/pics', {
+        templateUrl: 'views/pics.html',
+        controller: 'PicsCtrl'
       })
       .otherwise({
         redirectTo: '/'
