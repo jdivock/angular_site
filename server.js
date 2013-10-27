@@ -1,7 +1,7 @@
 var express = require('express'),
 	Cookies = require('cookies'),
 	http = require('http'),
-  flickr = require('./routes/flickr')
+  flickr = require('./routes/flickr'),
 	routes = require('./routes/multipost');
 
 // var allowCrossDomain = function(req, res, next) {
