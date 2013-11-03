@@ -43,7 +43,7 @@ if (app.get('env') === 'production') {
 
 // Routes
 
-app.get('/pics/flickr', flickr.getFlickrPhotos);
+//app.get('/pics/flickr', flickr.getFlickrPhotos);
 
 // MULTI POST
 app.get('/multipost/evernote_login', routes.evernote_login);
