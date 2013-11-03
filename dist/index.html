@@ -24,17 +24,17 @@
 
     <div id="wrapper">
 
-    <div id="header" class="navbar navbar-inverse" bs-navbar="">
+    <div id="header" class="navbar navbar-inverse">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">JDivock.com</a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" ng-controller="HeaderCtrl">
             <ul class="nav navbar-nav">
                 <!-- You can use regular expressions -->
-                <li data-match-route="/"><a href="#">Home</a></li>
-                <li data-match-route="/blag"><a href="#/blag">Blag</a></li>
-                <li data-match-route="/multipost"><a href="#/multipost">MultiPost</a></li>
-                <li data-match-route="/pics"><a href="#/pics">Pics</a></li>
+                <li ng-class="{ active: isActive('/')}"><a href="#">Home</a></li>
+                <li ng-class="{ active: isActive('/blag')}"><a href="#/blag">Blag</a></li>
+                <li ng-class="{ active: isActive('/multipost')}"><a href="#/multipost">MultiPost</a></li>
+                <li ng-class="{ active: isActive('/pics')}"><a href="#/pics">Pics</a></li>
             </ul>
 
             <ul class="nav navbar-nav social">
@@ -123,7 +123,7 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="scripts/38233aa7.scripts.js"></script>
+    <script src="scripts/bfe1804f.scripts.js"></script>
     <script src="scripts/259341b1.plugins.js"></script>
     <script src="scripts/6b865daa.modules.js"></script>
 
