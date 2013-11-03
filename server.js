@@ -2,6 +2,7 @@ var express = require('express'),
 	Cookies = require('cookies'),
 	http = require('http'),
   flickr = require('./routes/flickr'),
+  flickrjs = require('./routes/flickrjs'),
 	routes = require('./routes/multipost');
 
 // var allowCrossDomain = function(req, res, next) {
@@ -43,7 +44,8 @@ if (app.get('env') === 'production') {
 
 // Routes
 
-//app.get('/pics/flickr', flickr.getFlickrPhotos);
+// app.get('/pics/flickr', flickr.getFlickrPhotos);
+app.get('/pics/flickr', flickrjs.getFlickrPhotos);
 
 // MULTI POST
 app.get('/multipost/evernote_login', routes.evernote_login);
