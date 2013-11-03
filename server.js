@@ -1,7 +1,9 @@
+'use strict';
+
 var express = require('express'),
-	Cookies = require('cookies'),
-	http = require('http'),
-	routes = require('./routes/multipost');
+  Cookies = require('cookies'),
+  http = require('http'),
+  routes = require('./routes/multipost');
 
 // var allowCrossDomain = function(req, res, next) {
 // 	res.header('Access-Control-Allow-Origin', "*");
@@ -21,7 +23,7 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.cookieParser(process.env.COOKIE_SECRET));
 app.use(express.session({
-	secret: process.env.SESSION_SECRET
+  secret: process.env.SESSION_SECRET
 }));
 app.use(express.methodOverride());
 // app.use(allowCrossDomain);
@@ -30,15 +32,15 @@ app.use(app.router);
 // development only
 if (app.get('env') === 'development') {
   app.use(express.errorHandler());
-  app.use(express.static(__dirname + "/app"));
-  app.use(express.static(__dirname + "/.tmp"));
+  app.use(express.static(__dirname + '/app'));
+  app.use(express.static(__dirname + '/.tmp'));
 }
 
 // production only
 if (app.get('env') === 'production') {
   // TODO
-  app.use(express.static(__dirname + "/dist"));
-};
+  app.use(express.static(__dirname + '/dist'));
+}
 
 // Routes
 
@@ -63,6 +65,7 @@ app.get('/multipost/sbwc', routes.sbwcLogin);
 app.get('/clear', routes.clearAll);
 app.get('/cookies', routes.cookies);
 
-server.listen(app.get('port'), function () {
+server.listen(app.get('port'), function() {
+
   console.log('Express server listening on port ' + app.get('port'));
 });

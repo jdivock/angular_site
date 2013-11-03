@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularSiteApp', ['$strap.directives', 'multipostServices', 'picsServices'])
+angular.module('angularSiteApp', ['ui.bootstrap', 'multipostServices', 'picsServices'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
